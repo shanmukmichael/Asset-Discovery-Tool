@@ -28,7 +28,8 @@ def check_version(file, version):
     else:
         os.environ['version'] = get_hash(file)
         return(True) 
-file="/var/log/wtmp"
+file="ssh-log"
 if(check_version(file, os.getenv('version'))):
+    os.system('last >ssh-log')
     data=read_file(file)
     print(data)

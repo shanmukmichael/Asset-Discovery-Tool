@@ -1,6 +1,6 @@
 <div class="sidebar">
   <div class="logo-details">
-    <i class='bx bxl-c-plus-plus icon'></i>
+   <i clas='bx icon'><img style="width: 25px;" src="https://api.iconify.design/simple-icons:flipkart.svg"></i>
     <div class="logo_name">FlipKart GRiD 3.0</div>
     <i class='bx bx-menu' id="btn"></i>
   </div>
@@ -10,6 +10,7 @@
       <input type="text" placeholder="Search...">
       <span class="tooltip">Search</span>
     </li>
+    <br>
     <li>
       <a href="#">
         <i class='bx bx-grid-alt'></i>
@@ -17,7 +18,7 @@
       </a>
       <span class="tooltip">Dashboard</span>
     </li>
-
+    <br>
     <li>
       <a href="#">
         <i class='bx bx-chat'></i>
@@ -25,6 +26,7 @@
       </a>
       <span class="tooltip">Messages</span>
     </li>
+    <br>
     <li>
       <a href="#">
         <i class='bx bx-pie-chart-alt-2'></i>
@@ -32,6 +34,7 @@
       </a>
       <span class="tooltip">Analytics</span>
     </li>
+    <br>
     <li>
       <a href="#">
         <i class='bx bx-folder'></i>
@@ -39,6 +42,7 @@
       </a>
       <span class="tooltip">Files</span>
     </li>
+       <br>
     <li>
       <a href="#">
         <i class='bx bx-cog'></i>
@@ -54,18 +58,14 @@
           <div class="job">Shanmuk - Akhilesh - Jahnavi</div>
         </div>
       </div>
-      <i class='bx bx-log-out' id="log_out"></i>
+      <i class='bx bx-group' style="color: #11101d;" id="log_out"></i>
     </li>
   </ul>
 </div>
 <style>
-  /* Google Font Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins" , sans-serif;
 }
 .sidebar{
   position: fixed;
@@ -73,13 +73,15 @@
   top: 0;
   height: 100%;
   width: 110px;
-  background: #11101D;
+  background: #341cf0;
   padding: 6px 14px;
   z-index: 99;
   transition: all 0.5s ease;
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.3);
 }
 .sidebar.open{
   width: 250px;
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.3);
 }
 .sidebar .logo-details{
   height: 60px;
@@ -88,12 +90,14 @@
   position: relative;
 }
 .sidebar .logo-details .icon{
-  opacity: 0;
+  opacity: 100%;
+  text-align: left;
   transition: all 0.5s ease;
 }
 .sidebar .logo-details .logo_name{
   color: #fff;
-  font-size: 20px;
+  text-align: left;
+  font-size: 14px;
   font-weight: 600;
   opacity: 0;
   transition: all 0.5s ease;
@@ -128,6 +132,7 @@
 .sidebar .nav-list{
   margin-top: 20px;
   height: 100%;
+  
 }
 .sidebar li{
   position: relative;
@@ -137,7 +142,8 @@
 .sidebar li .tooltip{
   position: absolute;
   top: -20px;
-  left: calc(100% + 15px);
+  left: calc(100% + 25px);
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.3);
   z-index: 3;
   background: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -161,7 +167,8 @@
 }
 .sidebar input{
   font-size: 15px;
-  color: #FFF;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.3);
+  color: #1d1b31;
   font-weight: 400;
   outline: none;
   height: 50px;
@@ -170,28 +177,30 @@
   border: none;
   border-radius: 12px;
   transition: all 0.5s ease;
-  background: #1d1b31;
+  background: #fff
 }
 .sidebar.open input{
   padding: 0 20px 0 50px;
   width: 100%;
 }
 .sidebar .bx-search{
+  
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
   font-size: 22px;
-  background: #1d1b31;
-  color: #FFF;
+  background: #fff;
+  color: rgb(159, 159, 159);
 }
 .sidebar.open .bx-search:hover{
-  background: #1d1b31;
-  color: #FFF;
+ 
+  background: #fff;
+  color: #1d1b31;
 }
 .sidebar .bx-search:hover{
-  background: #FFF;
-  color: #11101d;
+  background: #fff;
+  color: #1d1b31;
 }
 .sidebar li a{
   display: flex;
@@ -201,13 +210,15 @@
   align-items: center;
   text-decoration: none;
   transition: all 0.4s ease;
-  background: #11101D;
+  background: #341cf0;
 }
 .sidebar li a:hover{
-  background: #FFF;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.3);
+  background: #fff;
 }
 .sidebar li a .links_name{
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-size: 15px;
   font-weight: 400;
   white-space: nowrap;
@@ -237,12 +248,13 @@
   left: 0;
   bottom: -8px;
   padding: 10px 14px;
-  background: #1d1b31;
+  background: #fff;
   transition: all 0.5s ease;
   overflow: hidden;
 }
 .sidebar.open li.profile{
   width: 250px;
+  
 }
 .sidebar li .profile-details{
   display: flex;
@@ -260,7 +272,7 @@
 .sidebar li.profile .job{
   font-size: 15px;
   font-weight: 400;
-  color: #fff;
+  color: #1d1b31;
   white-space: nowrap;
 }
 .sidebar li.profile .job{
@@ -271,7 +283,7 @@
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  background: #1d1b31;
+  background: #fff;
   width: 100%;
   height: 60px;
   line-height: 60px;
@@ -284,8 +296,6 @@
 }
 .home-section{
   position: relative;
-  background: #E4E9F7;
-  min-height: 100vh;
   top: 0;
   left: 110px;
   width: calc(100% - 110px);
@@ -298,10 +308,10 @@
 }
 .home-section .text{
   display: inline-block;
-  color: #11101d;
-  font-size: 25px;
-  font-weight: 500;
-  margin: 18px
+  color: #341cf0;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px;
 }
 </style>
 

@@ -1,47 +1,52 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<table id="data" class="table table-striped">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>IP</th>
-            <th>MAC</th>
-            <th>Hostname</th>
-            <th>Domain</th>
-            <th>OS</th>
-        </tr>
-    </thead>
-    <tbody>
-            {% for scan in data %}
-            <tr>
-                <td>{{ scan.ID }}</td>
-                <td>{{ scan.IP }}</td>
-                <td>{{ scan.MAC }}</td>
-                <td>{{ scan.Hostname }}</td>
-                <td>{{ scan.Domain }}</td>
-                <td>{{ scan.OS }}</td>
-            </tr>
-            {% endfor %}
-
-    </tbody>
+<table id="data" class="table table-striped table-responsive" style="font-size: 15px;">
+<thead>
+    <tr>
+    <th>ID</th>
+    <th>IP</th>
+    <th>MAC</th>
+    <th>Hostname</th>
+    <th>Domain</th>
+    <th>OS</th>
+    </tr>
+</thead>
+<tbody>
+    {% for scan in data %}
+    <tr>
+        <td>{{ scan.ID }}</td>
+        <td><span>local </span>{{ scan.IP }}</td>
+        <td>{{ scan.MAC }}</td>
+        <td>{{ scan.Hostname }}</td>
+        <td>{{ scan.Domain }}</td>
+        <td>{{ scan.OS }}</td>
+    </tr>
+    {% endfor %}
+</tbody>
 </table>
 {% endblock %}
 
 {% block scripts %}
 <script>
-    $(document).ready(function () {
-        $('#data').DataTable({
-            columns: [
-                { orderable: false, searchable: true },
-                { orderable: false, searchable: true },
-                { orderable: false, searchable: true },
-                { orderable: false, searchable: false },
-                { orderable: false, searchable: false },
-                { orderable: false, searchable: false }
-                ],
-        });
+$(document).ready(function () {
+    $('#data').DataTable(
+        {
+        "bLengthChange": false,
+        "bPaginate": true,
+        "bFilter": true,
+        "bInfo": true,
+        "bAutoWidth": true,
+        columns: [
+            { orderable: true, searchable: true },
+            { orderable: true, searchable: true },
+            { orderable: true, searchable: true },
+            { orderable: true, searchable: true },
+            { orderable: true, searchable: true },
+            { orderable: false, searchable: true },
+      ],
     });
+});
+
 </script>
 {% endblock %}

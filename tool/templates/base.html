@@ -11,17 +11,13 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.css">
 </head>
 
-
 <body>
     {% include 'sidebar.html' %}
+      <img class=' bx bx-server' style="width: 50px;margin-top: 30px;margin-right: 10px;float: right;"
+              src="https://api.iconify.design/uil:server-network-alt.svg">
+      <div class="text" style="color: blue;font-size: medium;text-align: end;float: right;margin-top: 18px">ASSET<br>DISCOVERY<br>TOOL </div>
     <section class="home-section">
-      <div class="col">
-        <div class="text" style="padding-right: 65%;padding-left: 25px;">Dashboard</div>
-        <div class="text" style="font-size: medium;text-align: end;">ASSET<br>DISCOVERY<br>TOOL </div>
-       <img class='bx bx-server' style="width: 50px;margin-bottom: 30px" src="https://api.iconify.design/uil:server-network-alt.svg"> 
-      </div>
-      <hr>
-      <div class="container">{% block content %}{% endblock %}</div>
+      {% block content %}{% endblock %}
     </section>
 </body>
 
@@ -48,7 +44,7 @@
     position: relative;
     border-collapse: collapse;
     width: 50em;
-    height: 35em;
+    height: auto;
     padding: 10px 10px 10px 10px;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;

@@ -10,22 +10,22 @@
 <thead>
     <tr>
     <th>ID</th>
+    <th>Hostname</th>
     <th>IP</th>
     <th>MAC</th>
-    <th>Hostname</th>
-    <th>Domain</th>
-    <th>OS</th>
+    <th>Lastseen</th>
+    <th>Status</th>
     </tr>
 </thead>
 <tbody>
     {% for scan in data %}
     <tr>
         <td>{{ scan.ID }}</td>
+        <td>{{ scan.Hostname }}</td>
         <td><span>local </span>{{ scan.IP }}</td>
         <td>{{ scan.MAC }}</td>
-        <td>{{ scan.Hostname }}</td>
-        <td>{{ scan.Domain }}</td>
-        <td>{{ scan.OS }}</td>
+        <td>{{ scan.Lastseen }}</td>
+        <td>{{ scan.Status }}</td>
     </tr>
     {% endfor %}
 </tbody>
